@@ -1,0 +1,1 @@
+$$('[data-speck]').forEach((b, bi) => { const r = rng(bi + 3); for (let i = 0; i < 9; i++) { const s = document.createElement('i'); s.className = 'speck'; s.style.cssText = `left:${r() * 100}%;top:${r() * 100}%;animation-delay:${-r() * 3.4}s;animation-duration:${2.4 + r() * 3}s;width:${2 + r() * 3}px;height:${2 + r() * 3}px`; b.appendChild(s) } });

@@ -1,0 +1,10 @@
+.contact-sec{position:relative;background:#000;padding:clamp(70px,10vw,150px) clamp(20px,6vw,100px) 36px;overflow:hidden}
+.contact-sec h2{margin:0;font:italic 800 clamp(2.6rem,8.4vw,8rem)/.98 var(--display);color:var(--amber);max-width:14ch;letter-spacing:-.02em}
+.mail{display:inline-block;margin-top:clamp(24px,4vw,48px);font:500 clamp(1.3rem,3vw,2.4rem) var(--sans);text-decoration:none;background:linear-gradient(var(--amber),var(--amber)) 0 100%/100% 2px no-repeat;padding-bottom:6px;transition:background-size .4s,color .4s}
+.mail:hover{background-size:100% 100%;color:#000}
+.foot{display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:space-between;align-items:center;margin-top:clamp(60px,9vw,130px);padding-top:22px;border-top:1px solid #ffffff1f;font-size:.88rem;color:var(--ash)}
+.foot nav{display:flex;gap:20px;flex-wrap:wrap}
+.foot a{text-decoration:none;color:var(--bone)}
+.foot a:hover{color:var(--amber)}
+.rewind{border:1px solid var(--line);background:none;border-radius:99px;padding:8px 18px;color:var(--amber);font-weight:500;transition:background .3s,color .3s}
+.rewind:hover{background:var(--amber);color:#000}

@@ -1,0 +1,15 @@
+.anim{display:grid;grid-template-columns:minmax(260px,.9fr) 1.1fr;gap:clamp(24px,5vw,72px);align-items:start}
+.story h3{margin:0;font:400 clamp(2.4rem,5.4vw,4.6rem)/1.02 var(--type);color:#fff;filter:url(#rough);letter-spacing:.02em}
+.story .sheet{margin-top:clamp(40px,8vw,110px);max-width:380px}
+.story .sheet h4{margin:0 0 8px;font:400 1rem var(--type);color:#e9e5dc;filter:url(#rough)}
+.story .board{border:1px solid #fff9;background:#050505;aspect-ratio:16/10;position:relative}
+.story .board svg{position:absolute;inset:0;width:100%;height:100%}
+.story .note{margin:8px 0 0;font:400 .88rem/1.35 var(--type);color:#e9e5dc}
+.story .note b{color:#fff}
+.acts{display:flex;gap:10px;margin-top:28px;flex-wrap:wrap}
+.acts button{border:0;background:#1d1d24;color:#9aa;border-radius:6px 14px 6px 6px;padding:8px 16px;font:700 1rem var(--sans);letter-spacing:.04em;transition:background .3s,color .3s,transform .3s}
+.acts button:hover{transform:translateY(-2px);color:#fff}
+.acts button[aria-pressed=true]{background:#2418ff;color:#fff}
+.players{display:grid;gap:clamp(24px,4vw,48px)}
+.players .player{transition:opacity .35s,transform .35s,filter .35s}
+.players.swap .player{opacity:0;transform:translateX(24px);filter:blur(6px)}

@@ -1,0 +1,12 @@
+dialog#lb{border:0;padding:0;background:transparent;max-width:100vw;max-height:100dvh;width:100vw;height:100dvh;color:var(--bone)}
+dialog#lb::backdrop{background:#000d;backdrop-filter:blur(10px)}
+.lbw{position:relative;width:100%;height:100%;display:grid;place-items:center;padding:clamp(16px,4vw,50px)}
+.lbw figure{margin:0;display:grid;gap:14px;justify-items:center}
+.lb-stage{position:relative;width:min(88vw,calc(72dvh*var(--r,1)));aspect-ratio:var(--r,1);background:#111;border-radius:6px;overflow:hidden;box-shadow:0 30px 90px #000}
+.lbw figcaption{text-align:center;max-width:60ch}
+.lbw h3{margin:0;font:italic 700 1.5rem var(--display);color:var(--amber)}
+.lbw p{margin:2px 0 0;font-size:.92rem;color:#cfc8b8}
+.lbw .b{position:absolute;border:1px solid var(--line);background:#000a;color:var(--amber);width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-size:1.3rem;transition:background .25s,color .25s}
+.lbw .b:hover{background:var(--amber);color:#000}
+.lbw .x{top:calc(14px + env(safe-area-inset-top,0px));right:16px}
+.lbw .pv{left:14px;top:50%}.lbw .nx{right:14px;top:50%}

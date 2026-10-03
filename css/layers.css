@@ -1,0 +1,10 @@
+#grain{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:90;opacity:.16;mix-blend-mode:overlay;image-rendering:pixelated}
+.cursor{position:fixed;left:0;top:0;width:34px;height:34px;margin:-17px 0 0 -17px;border:1px solid var(--amber);border-radius:50%;pointer-events:none;z-index:95;display:grid;place-items:center;
+  font:600 12px var(--sans);color:#000;transition:width .3s,height .3s,margin .3s,background .3s,opacity .3s;opacity:0}
+.cursor.show{opacity:1}
+.cursor.big{width:86px;height:86px;margin:-43px 0 0 -43px;background:var(--amber)}
+.cursor span{opacity:0;transition:opacity .2s}
+.cursor.big span{opacity:1}
+.reel{position:fixed;right:14px;top:50%;transform:translateY(-50%);z-index:60;writing-mode:vertical-rl;font:500 12px var(--sans);letter-spacing:.14em;color:var(--amber);display:flex;align-items:center;gap:12px;pointer-events:none;mix-blend-mode:difference}
+.reel::before{content:"";width:1px;height:70px;background:var(--amber);opacity:.6}
+.reel b{font-weight:500;color:var(--bone)}

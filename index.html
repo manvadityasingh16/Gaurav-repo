@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Portfolio — Designer & Editor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,600;1,700;1,800&family=Yellowtail&family=Outfit:wght@300;400;500;600;700&family=Bowlby+One&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/layers.css">
+<link rel="stylesheet" href="../css/nav.css">
+<link rel="stylesheet" href="../css/hero.css">
+<link rel="stylesheet" href="../css/bands.css">
+<link rel="stylesheet" href="../css/resume.css">
+<link rel="stylesheet" href="../css/tiles.css">
+<link rel="stylesheet" href="../css/motion.css">
+<link rel="stylesheet" href="../css/animations.css">
+<link rel="stylesheet" href="../css/film.css">
+<link rel="stylesheet" href="../css/contact.css">
+<link rel="stylesheet" href="../css/lightbox.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<script src="../js/boot.js"></script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" seed="3" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="3.5"/></filter>
+  <filter id="warp"><feTurbulence type="turbulence" baseFrequency="0.008 0.03" numOctaves="1" seed="8" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="16"/></filter>
+</svg>
+
+<canvas id="grain" width="220" height="220" aria-hidden="true"></canvas>
+<div class="cursor" aria-hidden="true"><span>View</span></div>
+<div class="reel" aria-hidden="true"><b id="tc">00:00:00:00</b><span>24 fps</span></div>
+
+<header class="nav" id="nav">
+  <a class="logo" href="#top" id="logo">Gaurav Agarwal</a>
+  <nav aria-label="Sections"><ul>
+    <li><a class="l" href="#resume">Resume</a></li>
+    <li><a class="l" href="#designs">Designs</a></li>
+    <li><a class="l" href="#motion">Motion</a></li>
+    <li><a class="l" href="#animations">Animation</a></li>
+    <li><a class="l" href="#film">Film looks</a></li>
+    <li><a class="l" href="#contact">Contact</a></li>
+  </ul></nav>
+</header>
+
+<main>
+  <section class="hero" id="top" aria-label="Introduction">
+    <div class="leak" aria-hidden="true"><span class="edge" id="edge"></span></div>
+    <p class="hero-roles" id="heroRoles"></p>
+    <div class="gate" id="gate">
+      <div class="frame">
+        <div class="media" id="heroMedia"></div>
+        <p class="yr" id="heroYr"></p>
+        <h1 class="portfolio">Portfolio</h1>
+        <svg class="swash" viewBox="0 0 800 80" aria-hidden="true"><path d="M8 62 C 180 30, 480 14, 792 44"/></svg>
+      </div>
+    </div>
+    <div class="hero-contact" id="heroContact"></div>
+    <div class="vline" aria-hidden="true"><span>/resume/curriculum vitae</span></div>
+    <div class="cue" aria-hidden="true"></div>
+  </section>
+
+  <section class="resume" id="resume" aria-label="Resume"></section>
+
+  <section class="works-intro" aria-label="My works">
+    <div class="reelstrip" id="reelstrip" aria-hidden="true"></div>
+    <h2 id="worksH">My works</h2>
+  </section>
+
+  <div class="band" id="designs" data-speck><h2>Designs</h2><span class="tag">My works</span><i class="scratch"></i></div>
+  <section class="sec" aria-label="Designs">
+    <div class="grid-a" id="gridA" data-stagger></div>
+    <div class="grid-b" id="gridB" data-stagger></div>
+  </section>
+
+  <div class="band" id="motion" data-speck><h2>Motion Graphic</h2><span class="tag">My works</span><i class="scratch"></i></div>
+  <section class="sec" aria-label="Motion graphics" style="padding-top:0">
+    <div class="mstrip fp" id="mstrip" style="margin-inline:calc(clamp(16px,5vw,80px)*-1)"></div>
+    <div class="mainplayer fp" id="mainPlayer"></div>
+  </section>
+
+  <div class="band" id="animations" data-speck><h2>Animations</h2><span class="tag">My works</span><i class="scratch"></i></div>
+  <section class="sec" aria-label="Animations" style="background:#09090b">
+    <div class="anim">
+      <div class="story fp">
+        <h3 id="storyTitle">Cinematic shots</h3>
+        <div class="sheet">
+          <h4 id="storyAct"></h4>
+          <div class="board" id="storyBoard"></div>
+          <p class="note" id="storyNote"></p>
+        </div>
+        <div class="acts" id="acts" role="group" aria-label="Choose an act"></div>
+      </div>
+      <div class="players" id="actPlayers"></div>
+    </div>
+  </section>
+
+  <div class="band" id="film" data-speck><h2>Film looks</h2><span class="tag">My works</span><i class="scratch"></i></div>
+  <section class="sec" aria-label="Film looks">
+    <div class="titles" id="titles"></div>
+    <div class="grade fp" id="grade">
+      <div class="layer raw" id="gradeRaw"></div>
+      <div class="layer top" id="gradeTop"></div>
+      <span class="tagl r">Raw</span><span class="tagl g">Graded</span>
+      <div class="hdl"></div>
+      <input type="range" min="0" max="100" value="50" id="gradeRange" aria-label="Compare raw footage and graded footage">
+    </div>
+    <div class="masonry" id="stills" data-stagger></div>
+  </section>
+
+  <section class="contact-sec" id="contact" aria-label="Contact">
+    <h2>Have a story that needs cutting?</h2>
+    <a class="mail" id="mail" href="#"></a>
+    <div class="foot">
+      <nav id="footSoc" aria-label="Social links"></nav>
+      <span id="copy"></span>
+      <button class="rewind" id="rewind" type="button">Rewind to start</button>
+    </div>
+  </section>
+</main>
+
+<dialog id="lb" aria-label="Project viewer">
+  <div class="lbw">
+    <button class="b x" id="lbX" aria-label="Close viewer">&times;</button>
+    <button class="b pv" id="lbP" aria-label="Previous project">&#8592;</button>
+    <button class="b nx" id="lbN" aria-label="Next project">&#8594;</button>
+    <figure><div class="lb-stage" id="lbStage"></div><figcaption><h3 id="lbT"></h3><p id="lbD"></p></figcaption></figure>
+  </div>
+</dialog>
+<script src="../js/config.js" defer></script>
+<script src="../js/utils.js" defer></script>
+<script src="../js/hero-resume.js" defer></script>
+<script src="../js/designs.js" defer></script>
+<script src="../js/film-stills.js" defer></script>
+<script src="../js/lightbox.js" defer></script>
+<script src="../js/reel-strip.js" defer></script>
+<script src="../js/scenes.js" defer></script>
+<script src="../js/players.js" defer></script>
+<script src="../js/motion.js" defer></script>
+<script src="../js/animations.js" defer></script>
+<script src="../js/contact.js" defer></script>
+<script src="../js/film-dust.js" defer></script>
+<script src="../js/grain.js" defer></script>
+<script src="../js/cursor.js" defer></script>
+<script src="../js/scroll.js" defer></script>
+<script src="../js/intro.js" defer></script>
+</body>
+</html>
